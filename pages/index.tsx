@@ -4,16 +4,16 @@ import Link from "next/link";
 export default function Home() {
   return (
     <div className="absolute flex flex-col gap-2 w-screen h-full">
-      <div className="flex h-3/5"></div>
+      <div className="flex h-4/6"></div>
       <div
         id="navegation_bar"
-        className="flex-1 grid grid-cols-3 grid-rows-2 h-14 px-2 bg-white border-gray-400 border-t w-full text-xs items-center justify-items-center text-center leading-3"
+        className="flex-1 grid grid-cols-3 grid-rows-2 h-14 px-2 bg-white border-gray-400 border-t w-full text-sm items-center justify-items-center text-center leading-3"
       >
-        <Link href="/devocionales">
+        <Link href="/devocionales/ds">
           <button className="group flex flex-col h-full justify-center items-center gap-3">
             <FontAwesomeIcon
               icon="coffee"
-              className="fill-current text-gray-500 transform scale-250"
+              className="fill-current text-gray-500 transform scale-200"
             />
             <p className="flex w-20 justify-center">Devocionales</p>
           </button>
@@ -22,7 +22,7 @@ export default function Home() {
           <button className="group flex flex-col h-full justify-center items-center gap-3">
             <FontAwesomeIcon
               icon="sticky-note"
-              className="fill-current text-gray-500 transform scale-250"
+              className="fill-current text-gray-500 transform scale-200"
             />
             <p className="flex w-20 justify-center">Anotaciones</p>
           </button>
@@ -31,7 +31,7 @@ export default function Home() {
           <button className="group flex flex-col h-full justify-center items-center gap-3">
             <FontAwesomeIcon
               icon="pray"
-              className="fill-current text-gray-500 transform scale-250"
+              className="fill-current text-gray-500 transform scale-200"
             />
             <p className="flex w-20 justify-center">Peticiones de oración</p>
           </button>
@@ -40,7 +40,7 @@ export default function Home() {
           <button className="group flex flex-col h-full justify-center items-center gap-3">
             <FontAwesomeIcon
               icon="hand-holding-heart"
-              className="fill-current text-gray-500 transform scale-250"
+              className="fill-current text-gray-500 transform scale-200"
             />
             <p className="flex w-20 justify-center">Donación</p>
           </button>
@@ -49,7 +49,7 @@ export default function Home() {
           <button className="group flex flex-col h-full justify-center items-center gap-3">
             <FontAwesomeIcon
               icon="calendar-alt"
-              className="fill-current text-gray-500 transform scale-250"
+              className="fill-current text-gray-500 transform scale-200"
             />
             <p className="flex w-20 justify-center">
               Calendario de actividades
@@ -60,7 +60,7 @@ export default function Home() {
           <button className="group flex flex-col h-full justify-center items-center gap-3">
             <FontAwesomeIcon
               icon="grip-horizontal"
-              className="fill-current text-gray-500 transform scale-250"
+              className="fill-current text-gray-500 transform scale-200"
             />
             <p className="flex w-20 justify-center">Más</p>
           </button>
