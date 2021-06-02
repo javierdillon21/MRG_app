@@ -6,7 +6,7 @@ export default function Favoritos() {
   return (
     <div className="absolute flex flex-col w-screen h-full gap-8 items-center">
       <div className="flex h-10 flex-shrink-0 w-full justify-between px-4 border-b border-gray-300 items-center">
-        <Link href="./sd">
+        <Link href="./devocional_hoy">
           <FontAwesomeIcon
             icon="arrow-left"
             className="fill-current text-gray-500 cursor-pointer transform scale-125"

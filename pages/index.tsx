@@ -9,7 +9,7 @@ export default function Home() {
         id="navegation_bar"
         className="flex-1 grid grid-cols-3 grid-rows-2 h-14 px-2 bg-white border-gray-400 border-t w-full text-sm items-center justify-items-center text-center leading-3"
       >
-        <Link href="/devocionales/ds">
+        <Link href="/devocionales/devocional_hoy">
           <button className="group flex flex-col h-full justify-center items-center gap-3">
             <FontAwesomeIcon
               icon="coffee"
