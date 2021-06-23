@@ -1,107 +1,64 @@
 import { type } from "node:os";
 
 
-type ResultsPrismic =PrismicDoc[]
+type ResultsPrismic= PrismicDoc[] | PrismicDocSZ[]
+
 interface PrismicDoc{
     id: string
     data: {
         categoria: string
         cita_biblica: Texto[]
         version_biblica: string
+        texto_biblico: Texto[]
         contenido: Texto[]
         titulo: Texto[]
     }
 }
 
+interface Devocional{
+    cita_biblica: string
+    version_biblica: string
+    texto_biblico: string
+    contenido: string
+    titulo: string
+}
+interface Anuncio{
+    titulo: string
+    categoria: string
+    contenido: string
+    imagen: Imagen
+    expiracion: Date
+}
 interface Texto {
-        text: string
+    text: string
+}
+interface Imagen {
+    url: string
+    dimensions: {
+        width: number
+        height: number
     }
+}
 
-// // Proyecto: estructura de un proyecto mosaico
-// interface Proyecto{
-//     encabezado: Encabezado
-//     multimedia: PlantillaMultimedia[]
-// }
+// Documento de prismic con slice zone
+interface PrismicDocSZ {
+    id: string
+    data: {
+        body: Slice[]
+    }
+}
 
-// //descripción del proyecto y/o sus partes. 
-// interface PlantillaMultimedia{ 
-//     resena: string
-//     imagenes: Imagen[]
-//     tipo: number
-// }
+interface Slice {
+    slice_type: string
+    primary: BodyPrimary
+}
 
-// //datos generales y portada del proyecto
-// interface Encabezado{
-//     nombre: string
-//     ubicacion: string
-//     categoria: string
-//     cliente: string
-//     ano: string
-//     portada: Imagen
-//     descripcion: string
-
-// }
-
-// interface Miniatura{
-//     nombre:string
-//     portada: Imagen
-//     categoria: string
-//     ubicacion: string
-// }
-
-// interface Slide{
-//     nombre: string
-//     portada: Imagen
-//     categoria: string
-//     descripcion: string
-//     idProyecto: string
-// }
-// //Utilities of MOSAICO-DOCUMENTS
-// type ResultsPrismic = PrismicDocument[]
-// type PropiedadesPlantillas = '1' | '1R' | '2' | '2R' | '3' | '3R' | '4' | '4R'
-
-// interface Texto {
-//     text: string
-// }
-// interface Imagen {
-//     dimensions: {
-//         width: number
-//         height: number
-//     }
-//     url: string
-//     idProyecto?: string
-// }
-
-// //Types of MOSAICO-DOCUMENTS
-// interface PrismicDocument {
-//     id: string
-//     data: {
-//         body: Slice[]
-//     }
-// }
-
-// interface Slice {
-//     slice_type: string
-//     items: BodyItems[]
-//     primary: BodyPrimary
-// }
-
-// interface BodyItems {
-//     imagen: Imagen
-// }
-
-// interface BodyPrimary {
-//     ano: string
-//     cliente: Texto[]
-//     categoria: string
-//     nombre: Texto[]
-//     ubicacion: Texto[]
-//     portada: Imagen
-//     descripcion: Texto[]
-//     resena: Texto[]
-//     link: {
-//         id: string
-//     }
-// }
+interface BodyPrimary {
+    titulo: Texto[]
+    categoria: string
+    contenido: Texto[]
+    imagen: Imagen
+    expiracion: Date
+}
 
 // type Carrusel= Slide[]
